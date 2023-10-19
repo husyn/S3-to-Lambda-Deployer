@@ -1,0 +1,18 @@
+service: lambdadeployer
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+
+functions:
+  function1:
+    handler: index.handler
+    events:
+     - s3:
+          bucket: lambdadeploymentbucket
+          event: s3:ObjectCreated:*
+          rules:            
+            - suffix: .zip
+          existing: true
