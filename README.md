@@ -7,6 +7,10 @@ This project uses [Serverless framework](https://www.serverless.com/framework/do
 Update `serverless.yml` file with the following configuration:
 - S3 bucket name. Replace *lambdadeploymentbucket* with your bucket name
 - Update region of your deployment by updating *region:* parameter
+ 
+</br>
+
+![Architecture Diagram for this project](resources/LambdaDeployerS3.png)
 
 # Installation
 
